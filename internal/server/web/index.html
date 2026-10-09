@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>墨影録 (Bokuei) - Epistemic System Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo">
+        <span class="logo-mark">墨</span>
+        <span class="logo-title">BOKUEI (墨影録)</span>
+      </div>
+      <span class="epistemic-badge">Append-Only Claim Ledger</span>
+    </div>
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="map" id="tab-nav-map">Map</button>
+      <button class="tab-btn" data-tab="explain" id="tab-nav-explain">Explain</button>
+      <button class="tab-btn" data-tab="diff" id="tab-nav-diff">Diff</button>
+      <button class="tab-btn" data-tab="impact" id="tab-nav-impact">Impact</button>
+      <button class="tab-btn" data-tab="ask" id="tab-nav-ask">Ask <span id="ask-counter-badge" class="badge-count">0</span></button>
+    </nav>
+    <div class="header-right">
+      <div class="stats-chip">
+        <span class="chip-label">Active Unknowns:</span>
+        <span id="stat-unknowns-count" class="chip-val chip-unknowns">0</span>
+      </div>
+      <div class="stats-chip">
+        <span class="chip-label">Ledger Claims:</span>
+        <span id="stat-claims-count" class="chip-val">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- VIEW: MAP -->
+    <section id="view-map" class="view-panel active">
+      <div class="map-toolbar">
+        <div class="toolbar-section">
+          <label class="time-label">Time Slider (Historical Effective State):</label>
+          <input type="range" id="time-slider" min="0" max="100" value="100" class="time-range">
+          <span id="time-display" class="time-stamp">Live / Latest</span>
+          <button id="time-reset-btn" class="btn-subtle">Reset to Latest</button>
+        </div>
+        <div class="toolbar-section legend-section">
+          <span class="legend-item"><span class="legend-dot dot-host"></span>Host</span>
+          <span class="legend-item"><span class="legend-dot dot-service"></span>Service</span>
+          <span class="legend-item"><span class="legend-dot dot-run"></span>Run</span>
+          <span class="legend-item"><span class="legend-dot dot-artifact"></span>Artifact</span>
+          <span class="legend-item"><span class="legend-box box-stale"></span>Stale</span>
+          <span class="legend-item"><span class="legend-box box-not-visible"></span>Not Visible Scope</span>
+        </div>
+      </div>
+      <div class="map-viewport-container">
+        <svg id="graph-canvas" class="graph-svg" viewBox="0 0 1200 700">
+          <defs>
+            <pattern id="not-visible-hatch" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(244, 63, 94, 0.45)" stroke-width="2.5" />
+            </pattern>
+            <marker id="arrow" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#64748b" />
+            </marker>
+          </defs>
+          <g id="graph-hatch-regions"></g>
+          <g id="graph-edges"></g>
+          <g id="graph-nodes"></g>
+        </svg>
+        <div id="node-inspector" class="inspector-card hidden">
+          <div class="inspector-header">
+            <span id="inspector-title" class="inspector-ref">ref://...</span>
+            <button id="inspector-close" class="close-btn">&times;</button>
+          </div>
+          <div id="inspector-body" class="inspector-content"></div>
+          <div class="inspector-footer">
+            <button id="inspector-explain-btn" class="btn-small">Explain</button>
+            <button id="inspector-impact-btn" class="btn-small">Test Impact</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW: EXPLAIN -->
+    <section id="view-explain" class="view-panel">
+      <div class="panel-header">
+        <h2>Entity Lineage, Effective Strength & Epistemic Status</h2>
+        <div class="search-bar">
+          <input type="text" id="explain-input" placeholder="Enter entity reference (e.g. ref://host/worker-01 or ref://package/numpy)..." class="input-text">
+          <button id="explain-submit-btn" class="btn-primary">Explain Reference</button>
+        </div>
+      </div>
+      <div id="explain-result" class="result-container empty">
+        <div class="empty-state">Enter a reference above or select a node in the Map view to inspect evidence lineage.</div>
+      </div>
+    </section>
+
+    <!-- VIEW: DIFF -->
+    <section id="view-diff" class="view-panel">
+      <div class="panel-header">
+        <h2>Side-by-Side Run & State Diff with Ranked Root Causes</h2>
+        <div class="diff-inputs">
+          <div class="input-group">
+            <label>Target A (Baseline Run or Timestamp):</label>
+            <input type="text" id="diff-target-a" placeholder="e.g. ref://run/... or 24h" class="input-text">
+          </div>
+          <div class="input-group">
+            <label>Target B (Comparison Run or Timestamp):</label>
+            <input type="text" id="diff-target-b" placeholder="e.g. ref://run/... or 1h" class="input-text">
+          </div>
+          <button id="diff-submit-btn" class="btn-primary">Compute Diff</button>
+        </div>
+      </div>
+      <div id="diff-result" class="result-container empty">
+        <div class="empty-state">Select two runs or historical cutoff points to inspect causal differences and epistemic visibility shifts.</div>
+      </div>
+    </section>
+
+    <!-- VIEW: IMPACT -->
+    <section id="view-impact" class="view-panel">
+      <div class="panel-header">
+        <h2>Reverse Impact Analysis, Blind Spots & Safety Verdict</h2>
+        <div class="search-bar">
+          <input type="text" id="impact-input" placeholder="e.g. ref://artifact/... or ref://package/openssl..." class="input-text">
+          <button id="impact-submit-btn" class="btn-primary">Analyze Impact</button>
+        </div>
+      </div>
+      <div id="impact-result" class="result-container empty">
+        <div class="empty-state">Enter an artifact, library, driver, host, or dataset reference to trace reverse dependencies and adjacent blind spots.</div>
+      </div>
+    </section>
+
+    <!-- VIEW: ASK -->
+    <section id="view-ask" class="view-panel">
+      <div class="panel-header">
+        <h2>Next-Best-Questions (Active Epistemic Verification)</h2>
+        <p class="panel-subtitle">Questions ranked by measured reduction in epistemic unknowns. Answering questions appends signed human verification to the ledger.</p>
+      </div>
+      <div class="ask-container">
+        <div class="ask-sidebar">
+          <div class="unknowns-summary-box">
+            <h3>Live Unknowns Monitor</h3>
+            <div class="unknowns-stat-row">
+              <span>Total Active Unknowns:</span>
+              <strong id="ask-total-unknowns">0</strong>
+            </div>
+            <div class="unknowns-stat-row">
+              <span>Blocked Telemetry:</span>
+              <strong id="ask-blocked-unknowns">0</strong>
+            </div>
+            <div class="unknowns-stat-row">
+              <span>Unresolved Identity / Gaps:</span>
+              <strong id="ask-identity-unknowns">0</strong>
+            </div>
+            <div class="notice-pill">Unobserved & blocked content is strictly labeled <em>not visible</em>.</div>
+          </div>
+        </div>
+        <div class="ask-main-content">
+          <div id="ask-question-list" class="question-list">
+            <div class="empty-state">Loading next-best-questions...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

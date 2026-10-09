@@ -1,0 +1,1795 @@
+{
+  "batch_id": "batch-1-c67236608f35",
+  "seq_no": 1,
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash": "c67236608f35b5b53b34a464f44abcb1c8398335e426bb0a0f7b8d46442df987",
+  "signature": "313ee9fe284257cbca248d04674cf01bace874cb39cdd44b7e5bc07aaaf8067180231ba995bfc1270ebc682ca9399debab0a658dadf71c874126ee7b8f10870b",
+  "public_key": "32a5e71dca466fba018aaab58e44fd3365a44c3242636cb3c823afc7632bd332",
+  "exported_at": "2026-10-08T19:06:38Z",
+  "claims_count": 99,
+  "claims": [
+    {
+      "claim_id": "f363b9e7090f464dd1ad08117c2206bd0902deb7a7b3856ba7ec8197027dc913",
+      "subject": "ref://zone/zone-a",
+      "predicate": "coverage.observed",
+      "object": {
+        "kind": "text",
+        "value": "monitoring_active"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "probe-network",
+        "method": "ping"
+      },
+      "scope": "ref://zone/zone-a",
+      "evidence_hash": "0746c2e755b8f4cca0f5407febd402b9c01962921ba2377199988870cec8e2c0",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "a37e60d74a0f844be804be4b7082a413e377310a2aa2ff4a5762e804232a130c",
+      "subject": "ref://zone/zone-b",
+      "predicate": "coverage.observed",
+      "object": {
+        "kind": "text",
+        "value": "monitoring_active"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "probe-network",
+        "method": "ping"
+      },
+      "scope": "ref://zone/zone-b",
+      "evidence_hash": "9ac954aa9d047642a7b0b4ea58de59015c6accb0dbf91526a94324b876644332",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "4ce98e7e906a38207eed9122d01d33d6ba0784d573eb69c2f14cb4ed06520ec8",
+      "subject": "ref://zone/zone-c",
+      "predicate": "coverage.blocked",
+      "object": {
+        "kind": "text",
+        "value": "airgapped_zone_unreachable"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "probe-network",
+        "method": "ping"
+      },
+      "scope": "ref://zone/zone-c",
+      "evidence_hash": "70d7c83b3835f93d754088ab88d1d007ce63fcc598275ebc4eca9378eb9537ac",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "4cc9850ed5aa8ef7bc7e9ffab528534324d297aeccf79067a103070ae39a570e",
+      "subject": "ref://host/host-ai-01",
+      "predicate": "host.kernel",
+      "object": {
+        "kind": "text",
+        "value": "6.8.0-45-generic"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "uname"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "9d23812aa722c207508ac9a74532ad6680d78f659e92b6994673ffaede552d14",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "d06416a36f7741cca3f8406cb8d330f9fd36dc5d719924b6db81582046f695b2",
+      "subject": "ref://host/host-ai-01",
+      "predicate": "host.cpu_feature",
+      "object": {
+        "kind": "text",
+        "value": "avx512"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "f50c690b7e439d926ca0640ddbf0ca9156e025dadda1a07f71238e886ced77c3",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "626b0b1b5b40fdcbac66e092836c45958bb5bb2e7410b8939132c985b04d3645",
+      "subject": "ref://host/host-ai-01",
+      "predicate": "host.gpu",
+      "object": {
+        "kind": "ref",
+        "value": "ref://gpu/gpu-a100-01"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "nvidia-smi"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "9f7b83ab739ad3aa53467b51f6358cf264e815afb3e432125f2d5a11f87081ff",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "d9d61a56945f3777785a1a9358b97e9a4e86da1ee259f16d95da1a4c074c899e",
+      "subject": "ref://host/host-chain-01",
+      "predicate": "host.kernel",
+      "object": {
+        "kind": "text",
+        "value": "6.8.0-45-generic"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "uname"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "66b0f61739a04c9df04642fa7ab22b51f1ab3a1fb89bfeac573d162bf8c5e2dc",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "93324192bf1f85054e40492aac94f84fcee119452824ef869c2ba8bb871e4b12",
+      "subject": "ref://host/host-chain-01",
+      "predicate": "host.cpu_feature",
+      "object": {
+        "kind": "text",
+        "value": "avx512"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "a1e52a925dbcb201d3ebea98fb2817cdf5200abfe4e1e0f1ec2d64aa528792e4",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "75e698737cac7213f6ef560d0e7f1c807b655db6c871bc3a85700032e8473e98",
+      "subject": "ref://host/host-quantum-01",
+      "predicate": "host.kernel",
+      "object": {
+        "kind": "text",
+        "value": "6.8.0-45-generic"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "uname"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "99bc12c86ba710e988c5d45526e2e774e43a73da8c5bcd1084047046c9666a99",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "2a25a15e9fcdfacaaaa4e80c1d2b13de086c4b0788bc1da3142e21bc9701fe6b",
+      "subject": "ref://host/host-quantum-01",
+      "predicate": "host.cpu_feature",
+      "object": {
+        "kind": "text",
+        "value": "avx512"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "a23eb3da894eb1a0a619c8b77e8af325c17a000877c58a8477fe2d010f4d0f0f",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "489ba7497fe8f8108d7ef69637be011910d20999bdd70745dfb156fccee309ed",
+      "subject": "ref://host/host-ai-01",
+      "predicate": "package.version",
+      "object": {
+        "kind": "text",
+        "value": "nvidia-driver-535"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "dpkg"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "9ff544c860624c765b74f2e0484d26033faacbea6717772dec394e848fa2a603",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "e058d633bff6ef05be137fd884a0de7d0ea245161142585bb10bb9df1a227dd2",
+      "subject": "ref://host/host-ai-01",
+      "predicate": "package.version",
+      "object": {
+        "kind": "text",
+        "value": "nvidia-driver-550"
+      },
+      "observed_at": "2026-10-02T12:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "dpkg"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "6e56bbf646d5f6a03b03e09d072963f2033d7d3cbf04e849d5d4e6566f0b6c67",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "ab8f6175a20745c61f969255de10aa73de0d4252fd4037ea94ac49a76650afe3",
+      "subject": "ref://dataset/imagenet-subset-v1",
+      "predicate": "artifact.sha256",
+      "object": {
+        "kind": "text",
+        "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "sha256"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "2afa5f2e0448295e1b0f0d63502f7290b46c2908ca6061d82126ae90618c33e5",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "1d8618ee9f71e9b3b621ec90caa0226b989672834b2d523c6924b9e1bb7f358f",
+      "subject": "ref://dataset/imagenet-subset-v1",
+      "predicate": "artifact.sha256",
+      "object": {
+        "kind": "text",
+        "value": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e"
+      },
+      "observed_at": "2026-10-01T08:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "sha256"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "68148389696792a1d04aa1be39368fd37b287e1b47fde9b51db75d8d179b9927",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "c8b53dd774b14298ec86a9708110ea859f422aa18a4283440e4df27ae7a16fee",
+      "subject": "ref://package/solana-validator",
+      "predicate": "package.version",
+      "object": {
+        "kind": "text",
+        "value": "1.18.11"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "cargo"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "b02712695ca068a1b175baed3a2b64527e842852e37b34b4d13c1c59b6f371f0",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "96ad5385fcf6ec16824473e52e55011f817133e334493c982ab747f0e1259401",
+      "subject": "ref://package/solana-validator",
+      "predicate": "package.version",
+      "object": {
+        "kind": "text",
+        "value": "1.18.15"
+      },
+      "observed_at": "2026-10-02T06:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "cargo"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "bc32e4393888bf75b3d046a612386b40360449a68be88200b90c6fe67d90ec03",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "78479324881922a5c25699acb43cf2d723011679791ec5fdc2512591b6dc89bd",
+      "subject": "ref://service/telemetry-collector",
+      "predicate": "host.listens",
+      "object": {
+        "kind": "ref",
+        "value": "ref://endpoint/host-chain-01:9090"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "ss"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "a5c7d2699fb433243c5309945840f1d4dc9514b5226a2d63f9cbcaf48859108e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "b781076ab84d9bc7b2abf14e2443f627f3c70722169039d55e9a7472d74aab42",
+      "subject": "ref://service/telemetry-collector",
+      "predicate": "host.listens",
+      "object": {
+        "kind": "ref",
+        "value": "ref://endpoint/host-quantum-01:9090"
+      },
+      "observed_at": "2026-10-02T16:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "ss"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "62c768be511fda254d6c21d44d7e9bc76d64f2573ec90f13f027db8beeba1e08",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "1a9e7fe3cc702715458aa918175352d37bc3de0fd665300184d529166c1789a3",
+      "subject": "ref://host/host-chain-01",
+      "predicate": "human.verified_by",
+      "object": {
+        "kind": "text",
+        "value": "alice@corp.internal"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "inventory",
+        "id": "cmdb-sync",
+        "method": "api_sync"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "5b8f7dc7652af9a08d7b6d170be3581b55af824cf30ade4cbbdbeee3f8fb76ae",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "86533c4d5d436bbfb8fd90b31f2ef21d60faac4b7e08d9949e7485ec733333f6",
+      "subject": "ref://run/run-001",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 32"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "37dfc7d757f2d7ac34a2fe02445f4fa9ea0f40df7eba2ec4f045828766d05bfc",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "32bb19210202506025b87255a7fd903fc71b121709f6cd277e98650ededce474",
+      "subject": "ref://run/run-001",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "b91fa76328b4e5a14e015ab1d724a86c5f34ce916cb697c4e4aee6a79d87f2cc",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "00200ea56b2f2f3acae5c71b9001b3553eeb9d9aaefced6701e7eac84ba46f6a",
+      "subject": "ref://run/run-001",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T00:15:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "c324078c74055acbe44e941ac78485e15b3214420ae73b7382d83340e9a78d09",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "b315190eacbe80579c10dde0eff0b6b81492f303f02b8ac134229a4cf93b8ac6",
+      "subject": "ref://run/run-001",
+      "predicate": "run.read",
+      "object": {
+        "kind": "ref",
+        "value": "ref://dataset/imagenet-subset-v1"
+      },
+      "observed_at": "2026-10-01T00:00:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "ptrace"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "d6852d9f5bfb5cdeb48ee808ef06c10b54d06fb48862793519b08c1b0701d922",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "3032e520e33c1872fe399d13b8e530e5d7c77d3964e1d0826ffcd1aea8bc7556",
+      "subject": "ref://run/run-002",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-01T02:52:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "1339decc9ec6f714380b920db40696aa6e88e5c44268ef3a68335f367cd5f3b5",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "b0caf03533ce40aec01448fac09a66dd91a145bc5f0a1681ef084fd391ca5ead",
+      "subject": "ref://run/run-002",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-01T02:52:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "11e2c3048dcf10c49225dc82a93bb53208f640060eba6c844b2300c88bc601f5",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "893c4e218e2abea882b2c796e1aeb61dc0aacf75a20499d8688378fc93b70a60",
+      "subject": "ref://run/run-002",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T03:07:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "348fdd61c2fce845996f8f43f0d68becac5f2ce4fe2982d8a88f770295af0e8c",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "4f58d56963ab694ea9909ce5930cb87ff1dc790103a8b66046c1df568610c51c",
+      "subject": "ref://run/run-003",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 48 --shots 1024"
+      },
+      "observed_at": "2026-10-01T05:45:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "70b387008706b9765dd15d5332e6baf62544c96de8f9222fc48209da264da934",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "9b5cedef5f4944f9fcfd0e199bb613f2c84af7ebf90186e5971ce1501788e6a2",
+      "subject": "ref://run/run-003",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-01T05:45:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "85ed28509b6e173ee403295b9aa1b898d6322be8f07e028c9ac3c50a84c71b5e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "dcc2ba4f167bae684229bd482954e803daad15b915aca7f6bbd273d7eeb2c34e",
+      "subject": "ref://run/run-003",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T06:00:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "653775bd04713a6931bd8980cd4c508b8f84b1fca76497f57aa8f8a95072cc92",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "4705e913626f336c554ad3ee62fdcc79332092d9a07eec87abbfa66322f20de3",
+      "subject": "ref://run/run-004",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 64"
+      },
+      "observed_at": "2026-10-01T08:38:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "8f61496eb2484ab17c75b50c7b2ee16004f370f5bcd8cb680dad82d5176c301e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "f2ec52f7973e66b4b213d4b9cc8f574665aa78dee09acdc680f7a00f75a3c534",
+      "subject": "ref://run/run-004",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-01T08:38:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "0c2bc9836722db61e62bec44df7c3be7fd4ad4d63214c176c69a61d6f8fbebba",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "2e9c10663a973207838da693199a710eaccd7bb9216fe851c6a2c6510a7ceb58",
+      "subject": "ref://run/run-004",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T08:53:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "57c66ec875c3e433511c1ada00bfe0a2283d22f00b1ae0a972959a716100a4f1",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "1892482da19e33dfcb8eddf5e68fef016f67e65acf16b3f229b277bae3e90731",
+      "subject": "ref://run/run-004",
+      "predicate": "run.read",
+      "object": {
+        "kind": "ref",
+        "value": "ref://dataset/imagenet-subset-v1"
+      },
+      "observed_at": "2026-10-01T08:38:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "ptrace"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "43712debbd37007a28446f108ed541b9d0082406490b93fe9813a79e80b3475d",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "c94e95d3151be0d84a10c861a27a5d8c416c58573f1d234a34fcdb960ee4d668",
+      "subject": "ref://run/run-005",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-01T11:31:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "1ac9e7a29a034f0495580b0ca2abffa59a4927749c6d0c95274f1c02f972785e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "cf7ff39ef11175497dcee4ab738f20be2e97dbe544bd592a120df53a0997309e",
+      "subject": "ref://run/run-005",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-01T11:31:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "a93c6f115ddf779e4de7d03d7b6e9e5372c16c82a7055610b9693d74b032b0b2",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "016108352df74aedcca21c490323f4ef11f48976b1102aa0e20e5d448f0fe1bd",
+      "subject": "ref://run/run-005",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T11:46:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "3a1b7ef058f5d2556bd3013af29340f5ba83664fee9fa1a5f9d55f23bbf700dd",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "d5774bbc19bbcc3aced9d43da70707696d6cac369fcc483a502e403372e54bd0",
+      "subject": "ref://run/run-006",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 32 --shots 1024"
+      },
+      "observed_at": "2026-10-01T14:24:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "561d5126caca4a8b25fb55867bc174e08cb28f7f6bece5d5093dbba598a820e3",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "6e43f6c609b212d03c67ace63dbf2ea5df7fb958bba1279eebd28f226a97c65c",
+      "subject": "ref://run/run-006",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-01T14:24:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "7f127a2f49cdcece165dffc2fe9d7d99545063be26d4c2e4810942ad10e1a521",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "bebafa5d761f0c9c27cdf9907e45d5045577a10c1afdda5aab85aa75ef656f29",
+      "subject": "ref://run/run-006",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T14:39:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "5707103193bf3c697a29bede263029ad9b74af48a0929f938f0cae00da44d23a",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "9287e0eb1cbad8735696d72d88a7332af05eccd9c4d1618702bf88c91bc06b5c",
+      "subject": "ref://run/run-007",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 32"
+      },
+      "observed_at": "2026-10-01T17:16:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "9a041983e3f270c76cff841ad9a04b1da4adc74832861e8dac940bcd454357e9",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "968551fb7a8e2a5eda36435fbc67c1645f3636d3e2265f0c0fba766cb1bf0e85",
+      "subject": "ref://run/run-007",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-01T17:16:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "9609f045a0afff0dc5a15a14b8a96d520d55816535ca133ff1b664a33527509e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "aa5d3c7d295c9765449155f16e342b56bb738e45cc477565280a4f3916e6333d",
+      "subject": "ref://run/run-007",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T17:31:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "edb6822d8e9afc81b7475d601c7889db10be86ff951ae64e0f0b5989c6c3c2c6",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "2d8d66906688d60038b14f88182026cfd49f3527b09189e9b91b6ed0955d8f2b",
+      "subject": "ref://run/run-008",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-01T20:09:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "a53dd32bd3817e1c675f1671b0ebdd1084c5e6ca7a1c2e76104b5fdcc937bb94",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "a099730c20545d7e918699cd797f54eab7a409a39e529b3721d7f5f2dd3d69ad",
+      "subject": "ref://run/run-008",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-01T20:09:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "22e2c7efac69ae2456990ffdf1bbf7aa76c6faf4dbed2d70bb83e198bfde709f",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "0cb5da8ea03ddc8e039563368905da21e8daf28cf2a1d7c670bdef7ada200c04",
+      "subject": "ref://run/run-008",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T20:24:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "d9efb82ddc3bd822bafe6155722fe133e8ac0545c2ae018d60da1168058497db",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "42793f2070cca03a858cf65399234c32f2d9bd8a6c34c342205c7262fa9ad3cc",
+      "subject": "ref://run/run-009",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 16 --shots 1024"
+      },
+      "observed_at": "2026-10-01T23:02:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "6fdb3a661f596dfc09772685c2fb581d02706c76506d1f8adcbabd234f0fa9de",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "6d31394ec7cc632c578c5750e6fdd9320697addfa223fc42a8cc7f188be946bd",
+      "subject": "ref://run/run-009",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-01T23:02:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "a2d640bbd16ba7388bdd854f2d026c9c7b2ee94a21c455d2dccdf322afb1bf81",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "758e056c38df3400ea489b9d227fac5b44c78627f8ca94b83e2a06912fb1ffb0",
+      "subject": "ref://run/run-009",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-01T23:17:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "b4bccee8747024412dbb9c7ee22d29083141e775d6664756d6cc03df326f41a5",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "809b1f88504b3aab46ebf1aa8d282b856f1a4c65f9a47ab87509c5acc8706268",
+      "subject": "ref://run/run-009",
+      "predicate": "run.loaded",
+      "object": {
+        "kind": "ref",
+        "value": "ref://artifact/liblegacy_math.so.1"
+      },
+      "observed_at": "2026-10-01T23:02:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "ptrace"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "24b2a6b197d3a29b0a66ea636259eeaf15fcac9bf226f6fb3e8db34a8be4d6eb",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "b051d7a5e99e1af1754a72e4922e7203877bfab0e13c3ab6f6a53334e08dceac",
+      "subject": "ref://run/run-010",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 64"
+      },
+      "observed_at": "2026-10-02T01:55:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "57d89a6e819e4e0023243a315175497f682911e41b3c5f96355cc90aee872913",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "2172b82973bb3a79c2215b0fbb3ada921fd5ea4d0f46886b9d6c1efc7ddcbf44",
+      "subject": "ref://run/run-010",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-02T01:55:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "8630c6ce9fca7241e77d2794ef2fe737e7557b076435bc292d7eba15b0ce6e04",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "6b900122d46e0cf1d62149c3cbd7988334462499b1c654d3b33f6ea6c58627a1",
+      "subject": "ref://run/run-010",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T02:10:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "aef510e11f136a8279cb6239b166336dd3ca84d56ff9b2b5cf4c0e65374c92e7",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "f7682a8c3ba4511831e8e4f0d08aca4ed91c4a5d9ab763c1b5dc91d9b51f285e",
+      "subject": "ref://run/run-011",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-02T04:48:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "9d99e37ad76dfbdb0b9bb9999dee3b60ba700cbbd42d2ec55cd2fc353a01f906",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "181b1109c1ade501aed0cd258b68262e63471c680d6c6c6bb50a96c18e68b42b",
+      "subject": "ref://run/run-011",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-02T04:48:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "f4a3b2d4af1e52a7208b3387405cf752656d89d711971503390c1e77841e4f7e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "4163df6c84ef6c724cf45b1d90ce31a7380e9fa44104576802a294acd8efefc9",
+      "subject": "ref://run/run-011",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T05:03:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "eee159fde6ed31435a6fd4854f7658c586291655d4601c3e298c5ce8d7cf24c9",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "38dc4454217fb969a7f428252b588b9fcc88fd177a6d6bfc82c5fd7c469f39b7",
+      "subject": "ref://run/run-012",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 64 --shots 1024"
+      },
+      "observed_at": "2026-10-02T07:40:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "3fddcfd5a6140cc7eda351c14de1ffe183a6a8a695318961dc6a13897d24502e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "c4bcd65cbc2fcfa516d100fc11deb1c76fe4e22f88f4be00dcd8c4ed3565b8e6",
+      "subject": "ref://run/run-012",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-02T07:40:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "effd2af8f5800f63dbd64e5325747a489db78524ab30fa8cf495ce9f22800791",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "fc98c8b92401aef038c1fb0eebc775a050d95158d6512932aaa933a739908922",
+      "subject": "ref://run/run-012",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T07:55:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "54a2316f326ca4d16d6e844a75aa73cb8f23c8a27fc0054c6577bbf6a0a367a4",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "0c650ff53de817a59fee001c9ac23c34f65dc6b5488e3d29eb33afbc25f698c0",
+      "subject": "ref://run/run-013",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 32"
+      },
+      "observed_at": "2026-10-02T10:33:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "0ffd70037479f0c8bd9183c6c2b60f13622acaeb1515f0638360889120be8994",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "f4ac1dcf813ddcd01f0df726f069ee472e24d94a829194683e6ccd42ab1801bb",
+      "subject": "ref://run/run-013",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-02T10:33:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "7019ec258f7e0ab0378d4a8d322965949e1ff6e652129541a26eff9dc7df11f1",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "0f56c9e5884bff8e6319a0dc9751202b5871a0a337b4be9a165b3ef105b42b34",
+      "subject": "ref://run/run-013",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T10:48:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "34b7cd939b6931bd0f24f099fef6384a1830ff703af4d8fe231fbe60aa0012f5",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "a2757c872f9c109afbe6a1e4ce4a97b778a5508a09d992c4edd5457782db73e1",
+      "subject": "ref://run/run-013",
+      "predicate": "run.connected_to",
+      "object": {
+        "kind": "ref",
+        "value": "ref://endpoint/zone-c-db-internal:5432"
+      },
+      "observed_at": "2026-10-02T10:33:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "ebpf_sock_connect"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "57a2c5666e60e31aafe166604875e7b88a4b5c511a083507d7d27bcf07e3de01",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "97d3a1f4e3991a611d8f9c1a3d1bc91fe3ab8cfca7ea3f78abacaf6cf0b7c3c4",
+      "subject": "ref://run/run-014",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-02T13:26:23Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "38f7a961adbc5430b0a703452d8ba3a5e6cc4451b6dec489df67a6a18ba29df1",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "86c94f5cd6b7bc2c6f2a207940cfa987324566d208fb710cfe6ace0af0ce5265",
+      "subject": "ref://run/run-014",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-02T13:26:23Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "e29a171d11ee8a2c9c26ed387499524ab4e0b27d9fb5492124d302bb09b17f0e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "943b95e26555ac78c37e8ad7ce5104948bd4a9fab068bdb16f26e93822db5254",
+      "subject": "ref://run/run-014",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T13:41:23Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "6050b2e7a662acb1b8f6c4d4b8d7e6a3c5d584ec1deae114c9269998885b4947",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "a6d5e5932155b197cbef7eee1ca6b5831e9069be44900ffdaec2c4b4360cccf3",
+      "subject": "ref://run/run-015",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 48 --shots 1024"
+      },
+      "observed_at": "2026-10-02T16:19:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "0f91358e20ed4b4e2a4f89823935a2c15bd86ee5ffbee1c543cea35a735c3878",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "b4d756af7004ff7503cd73345d70117dbcf697a08fdf5e126a3059ccad66aa61",
+      "subject": "ref://run/run-015",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-02T16:19:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "07f68bd380696d95d43cf9bc0d2406998954d6a29e1887076bcc066d237ae4ed",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "77ad4b5c29d1bfdb1a97f33d17fccb0d8e6461ba715047c03eed8dd406ec50c4",
+      "subject": "ref://run/run-015",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T16:34:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "a89490f4ffe81d396db43223e929f7560452ee166a103cc8913b6be2cd5dec64",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "7000a149bbf7af8b37590d26b91ace06a355c7eb366be59413b5da5c2fe39bb2",
+      "subject": "ref://run/run-016",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 64"
+      },
+      "observed_at": "2026-10-02T19:12:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "f05ae922182c49a6bf5a98d287a95e34fd1fdb066d2f5ecf4b379a540f57cea3",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "24d20463a27185be40db0b65df4047c6633203032579abe88bb2b5dc8a96743d",
+      "subject": "ref://run/run-016",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-02T19:12:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "0f43ef2c05e183f7e3f557a11992121e795ac3c5f051399c5ea0776ce0f0d7d4",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "76d6d610f6f64a0a24008ab9325248596356529fffa0cb275cf4a61871f86f1e",
+      "subject": "ref://run/run-016",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T19:27:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "3edda60e11cd5234516d1e85bf49a1dc42a43c4ad13ff9407c6aad3ca8459ebd",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "fa0b0cc3d5deba94ed34b95ddbe29310ab1bf3e099da193438166f27a36feb2c",
+      "subject": "ref://run/run-016",
+      "predicate": "coverage.blocked",
+      "object": {
+        "kind": "text",
+        "value": "ptrace_denied:yama_ptrace_scope"
+      },
+      "observed_at": "2026-10-02T19:12:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "ptrace_attach"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "57e8429905326326b0d2fc98f3c4232d02c8937f35729ee5b3a1777ed3c8bdbc",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "3b496e2989d4873db5e6cec4018af16081b5e1fd2c01db23e1ebfb306da45e13",
+      "subject": "ref://run/run-017",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-02T22:04:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "36876d76eb6d337c38b01185da87aa282f200142955a489675e064f324f341ee",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "c6752fbefc10d495e78de9e14ec1c63e150a61a7e13b37178d84621d8fc8052d",
+      "subject": "ref://run/run-017",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-02T22:04:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "06c782cc93ef1695030f1043dcf2fb57a71dcda4c87f088af6f833a3050d241e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "40cc348e9e6fb6edb4bf42c68d6f48bc325333c6f53a92dc7cd875978e33be4f",
+      "subject": "ref://run/run-017",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-02T22:19:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "4d294f6738aa683652df7a5c30cf7ee0e6d72ee93705152bd8fe5a628ef6526e",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "687f3b1a5a6a3e5d13f755a57a03077daba3dfa893bd9c5285778c0332906cd3",
+      "subject": "ref://run/run-018",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 32 --shots 1024"
+      },
+      "observed_at": "2026-10-03T00:57:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "b3d5ff2608ced1df03b3f267469639d0df5a32c28374a84f87648a277c58afad",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "740df0f847fcfe80194e97f012696fc06dd4a6ac65a33890bd101a6133102373",
+      "subject": "ref://run/run-018",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-03T00:57:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "294bd16e29d4b33b1d49a1c17d87c57c450ab68fa34f886db9e0284acbedf693",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "65448787697759be74954f8c18e36ec98ece9e353b38593c0d61926698d5856d",
+      "subject": "ref://run/run-018",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T01:12:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "f2c8c488c9a85addf4a8e6585143421e963d84453ac63beea4984a8e0364a344",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "9160620065ce861eb031ed3c15c38e306b14692fd83fda059f09cbb9391574dd",
+      "subject": "ref://run/run-019",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 32"
+      },
+      "observed_at": "2026-10-03T03:50:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "cef91b03f9bede4d3787c5f2e6d57f82a7dda60e8849cdb953dd99473d772d52",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "694acdaa9227b569a55c719a09b1f16accca2b81c310c1f020e63df74df37224",
+      "subject": "ref://run/run-019",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-03T03:50:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "739d90469001d9e8a6ea5f7f3bc3b7edf537dc202cdcc67decfd41057374eaec",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "119a80c151e4a00636bd7745e1336675a5220ddd54bafae14a4a17dcbc3d5a4d",
+      "subject": "ref://run/run-019",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 1
+      },
+      "observed_at": "2026-10-03T04:05:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "71b47fe83b64ca8f470011e347fef3a52d0c8d30c28ab56e70b4b2ff9be8872b",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "60e7ea7135e8982215fdc8e25e2718292baa40f92b3c6300cbaa27fea0334c52",
+      "subject": "ref://run/run-020",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-03T06:43:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "112b7b19ef93b8a36e528e0f5b683614d7910a89abdd237b0a8adff2239318b2",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "24a02ee3328d2937faa6b299df05941ae8dc27ee6591daf06a4ff1442f54353f",
+      "subject": "ref://run/run-020",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-03T06:43:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "1ef9bd71d62da36c4aa17956f4bdc62941e0a3fa4c1622eacd37c5ccda6d862d",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "d07ab7f2c1c7e9dee08d261d1a750590e3aa76e46b098269890d62ed3818474e",
+      "subject": "ref://run/run-020",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T06:58:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "fe4fdcef111610ecea76bea3bd312ac2ad7e2066a04b9477f864255e5cc3dad1",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "1ab32a5a1e095c29681f9cc0eeb08b48f991c155a73fe383106d7460745475dc",
+      "subject": "ref://run/run-021",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 16 --shots 1024"
+      },
+      "observed_at": "2026-10-03T09:36:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "4d31ba83e530d2b33f24e69f3db976a263ae14ca0f45e41c5b7977364f39cd48",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "ea64f57e54b6f45fd3785787154d0b883d2e6722fd5af210975725809329cc69",
+      "subject": "ref://run/run-021",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-03T09:36:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "bf08a3b77f33ac1f628a3a59226230fd1af47dc2b6fe4be8d7fd3bcfa0536ec4",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "2a57e9d6333e86c1f2a4c60076209fe7ee8aed66f2323cc0e8c65e0caabff7ce",
+      "subject": "ref://run/run-021",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T09:51:00Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "00524d864406daf99a4bab69d70f111d24a30614eb8d187a81388edf3dd48360",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "406b0f6139d40043bb135fe0db377e0674e61025ee4111610d149f7308b37b47",
+      "subject": "ref://run/run-022",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 64"
+      },
+      "observed_at": "2026-10-03T12:28:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "dffed052548f2e8bbd0cd8fcb00f6ea48c6b358d8f51c449b1ae11897a065dbb",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "a125e0e0b477958b7c61f2072d045bb22c2d27f85e4f4b9dc2b93a34e121d746",
+      "subject": "ref://run/run-022",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-03T12:28:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "c49e9d2ab610bb2dd5c2d00c1153f4ceed8cb1857d929f555f66fbd5d7094714",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "63d9c92c9066c8acebf349a2d876d9c96a7abe66ec10289902e1e2297aac0979",
+      "subject": "ref://run/run-022",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T12:43:48Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "a8d39f4a4f5b4d67bd156cf6189809eb819be133e41db6048c746124c2a6b028",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "7a9090b8e8215ba0192f68058d8628a3f88e87191e1e6a03919e5149744f4bca",
+      "subject": "ref://run/run-023",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "solana-validator --ledger /mnt/ledger --rpc-port 8900"
+      },
+      "observed_at": "2026-10-03T15:21:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "61dd28629670bc590ecf20951e57f63b242b4ed437e4fdf6071c31b666ac54cb",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "23823e0243d49e6d81b7f55a25f5399e66c8134f49b263fa33e795bbbadf1b76",
+      "subject": "ref://run/run-023",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-chain-01"
+      },
+      "observed_at": "2026-10-03T15:21:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "725f171a428ddd7d5e564d2c8ca230885e6be66db383f055532161920856219c",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "cf3f03e26ffd4e3157661e3723b17034990eabc55c18303570ec1ee6583af99c",
+      "subject": "ref://run/run-023",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T15:36:36Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-chain-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-chain-01",
+      "evidence_hash": "75af6de4a468f9291066109e9ffe8099a87566e6d002e7b96c9b73975f34a1a6",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "cfd3ddca78103f0de60140e53cb4e10ec5393be0d6dcd1f9e302c77aabf952a4",
+      "subject": "ref://run/run-024",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "qiskit-runner --circuit-depth 64 --shots 1024"
+      },
+      "observed_at": "2026-10-03T18:14:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "b3f90ffb95e03f1d573b14fab05ab7660892150e9fb94ceeccee093b71260014",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "1c97dbb3c941ca27b4994abd37ce9c302cf6174047bfa4b54784f48af98a669a",
+      "subject": "ref://run/run-024",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-quantum-01"
+      },
+      "observed_at": "2026-10-03T18:14:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "666b78786f93c2fafd8fcb629601ff9502c13e38f9b52a0cbc501fbbe3587c76",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "a0b4157c3cb303ccd4c07f4509480970463b8119414e7b0d533c754ed20e2b21",
+      "subject": "ref://run/run-024",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T18:29:24Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-quantum-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-quantum-01",
+      "evidence_hash": "813a49ff73fafe6b10010ffadc269cf37856a949bfbad8dcb0c2da85a3873f9f",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "4d3855d6c94f442b6a5b940bd185675aef070c5fb18ab2b67015a0b44ada5e1a",
+      "subject": "ref://run/run-025",
+      "predicate": "run.command",
+      "object": {
+        "kind": "text",
+        "value": "python train_model.py --batch_size 32"
+      },
+      "observed_at": "2026-10-03T21:07:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "procfs"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "d6c819f24a74c7433fcf81b4f7a97b5cd767b23f3e386304d682e912d9812971",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "2e3304a65ac333b279fdb8faace2126efd71fae17ea5ef020f77d67f26b00d77",
+      "subject": "ref://run/run-025",
+      "predicate": "run.ran_on",
+      "object": {
+        "kind": "ref",
+        "value": "ref://host/host-ai-01"
+      },
+      "observed_at": "2026-10-03T21:07:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "runtime"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "c17998be807fc35013f3c780bbd83d137875b6079f49070df05e0cefa6ac920d",
+      "redaction": "none"
+    },
+    {
+      "claim_id": "71cff298b1526ebaae8cba394c1a8ae5138588492ee439de8ba6b0d95c37cc66",
+      "subject": "ref://run/run-025",
+      "predicate": "run.exit_status",
+      "object": {
+        "kind": "int",
+        "value": 0
+      },
+      "observed_at": "2026-10-03T21:22:12Z",
+      "source": {
+        "group": "agent",
+        "id": "agent-host-ai-01",
+        "method": "waitpid"
+      },
+      "scope": "ref://host/host-ai-01",
+      "evidence_hash": "ad4c53923080d9217d7074bb56618a8e62cab28afbaada88fdd6e57173d460f2",
+      "redaction": "none"
+    }
+  ],
+  "canonical_claims": "{\"evidence_hash\":\"c324078c74055acbe44e941ac78485e15b3214420ae73b7382d83340e9a78d09\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T00:15:00Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-001\"}\n{\"evidence_hash\":\"3a1b7ef058f5d2556bd3013af29340f5ba83664fee9fa1a5f9d55f23bbf700dd\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T11:46:12Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-005\"}\n{\"evidence_hash\":\"0ffd70037479f0c8bd9183c6c2b60f13622acaeb1515f0638360889120be8994\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 32\"},\"observed_at\":\"2026-10-02T10:33:36Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-013\"}\n{\"evidence_hash\":\"d9efb82ddc3bd822bafe6155722fe133e8ac0545c2ae018d60da1168058497db\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T20:24:36Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-008\"}\n{\"evidence_hash\":\"34b7cd939b6931bd0f24f099fef6384a1830ff703af4d8fe231fbe60aa0012f5\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T10:48:36Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-013\"}\n{\"evidence_hash\":\"71b47fe83b64ca8f470011e347fef3a52d0c8d30c28ab56e70b4b2ff9be8872b\",\"object\":{\"kind\":\"int\",\"value\":1},\"observed_at\":\"2026-10-03T04:05:24Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-019\"}\n{\"evidence_hash\":\"f4a3b2d4af1e52a7208b3387405cf752656d89d711971503390c1e77841e4f7e\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-02T04:48:00Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-011\"}\n{\"evidence_hash\":\"43712debbd37007a28446f108ed541b9d0082406490b93fe9813a79e80b3475d\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://dataset/imagenet-subset-v1\"},\"observed_at\":\"2026-10-01T08:38:24Z\",\"predicate\":\"run.read\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"ptrace\"},\"subject\":\"ref://run/run-004\"}\n{\"evidence_hash\":\"5b8f7dc7652af9a08d7b6d170be3581b55af824cf30ade4cbbdbeee3f8fb76ae\",\"object\":{\"kind\":\"text\",\"value\":\"alice@corp.internal\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"human.verified_by\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"inventory\",\"id\":\"cmdb-sync\",\"method\":\"api_sync\"},\"subject\":\"ref://host/host-chain-01\"}\n{\"evidence_hash\":\"4d31ba83e530d2b33f24e69f3db976a263ae14ca0f45e41c5b7977364f39cd48\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 16 --shots 1024\"},\"observed_at\":\"2026-10-03T09:36:00Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-021\"}\n{\"evidence_hash\":\"666b78786f93c2fafd8fcb629601ff9502c13e38f9b52a0cbc501fbbe3587c76\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-03T18:14:24Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-024\"}\n{\"evidence_hash\":\"68148389696792a1d04aa1be39368fd37b287e1b47fde9b51db75d8d179b9927\",\"object\":{\"kind\":\"text\",\"value\":\"a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e\"},\"observed_at\":\"2026-10-01T08:00:00Z\",\"predicate\":\"artifact.sha256\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"sha256\"},\"subject\":\"ref://dataset/imagenet-subset-v1\"}\n{\"evidence_hash\":\"8630c6ce9fca7241e77d2794ef2fe737e7557b076435bc292d7eba15b0ce6e04\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-02T01:55:12Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-010\"}\n{\"evidence_hash\":\"725f171a428ddd7d5e564d2c8ca230885e6be66db383f055532161920856219c\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-03T15:21:36Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-023\"}\n{\"evidence_hash\":\"1ef9bd71d62da36c4aa17956f4bdc62941e0a3fa4c1622eacd37c5ccda6d862d\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-03T06:43:12Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-020\"}\n{\"evidence_hash\":\"0f43ef2c05e183f7e3f557a11992121e795ac3c5f051399c5ea0776ce0f0d7d4\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-02T19:12:00Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-016\"}\n{\"evidence_hash\":\"a23eb3da894eb1a0a619c8b77e8af325c17a000877c58a8477fe2d010f4d0f0f\",\"object\":{\"kind\":\"text\",\"value\":\"avx512\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.cpu_feature\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://host/host-quantum-01\"}\n{\"evidence_hash\":\"00524d864406daf99a4bab69d70f111d24a30614eb8d187a81388edf3dd48360\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T09:51:00Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-021\"}\n{\"evidence_hash\":\"a53dd32bd3817e1c675f1671b0ebdd1084c5e6ca7a1c2e76104b5fdcc937bb94\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-01T20:09:36Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-008\"}\n{\"evidence_hash\":\"c17998be807fc35013f3c780bbd83d137875b6079f49070df05e0cefa6ac920d\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-03T21:07:12Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-025\"}\n{\"evidence_hash\":\"57c66ec875c3e433511c1ada00bfe0a2283d22f00b1ae0a972959a716100a4f1\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T08:53:24Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-004\"}\n{\"evidence_hash\":\"1339decc9ec6f714380b920db40696aa6e88e5c44268ef3a68335f367cd5f3b5\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-01T02:52:48Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-002\"}\n{\"evidence_hash\":\"b91fa76328b4e5a14e015ab1d724a86c5f34ce916cb697c4e4aee6a79d87f2cc\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-001\"}\n{\"evidence_hash\":\"3fddcfd5a6140cc7eda351c14de1ffe183a6a8a695318961dc6a13897d24502e\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 64 --shots 1024\"},\"observed_at\":\"2026-10-02T07:40:48Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-012\"}\n{\"evidence_hash\":\"36876d76eb6d337c38b01185da87aa282f200142955a489675e064f324f341ee\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-02T22:04:48Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-017\"}\n{\"evidence_hash\":\"dffed052548f2e8bbd0cd8fcb00f6ea48c6b358d8f51c449b1ae11897a065dbb\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 64\"},\"observed_at\":\"2026-10-03T12:28:48Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-022\"}\n{\"evidence_hash\":\"4d294f6738aa683652df7a5c30cf7ee0e6d72ee93705152bd8fe5a628ef6526e\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T22:19:48Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-017\"}\n{\"evidence_hash\":\"eee159fde6ed31435a6fd4854f7658c586291655d4601c3e298c5ce8d7cf24c9\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T05:03:00Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-011\"}\n{\"evidence_hash\":\"6fdb3a661f596dfc09772685c2fb581d02706c76506d1f8adcbabd234f0fa9de\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 16 --shots 1024\"},\"observed_at\":\"2026-10-01T23:02:24Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-009\"}\n{\"evidence_hash\":\"8f61496eb2484ab17c75b50c7b2ee16004f370f5bcd8cb680dad82d5176c301e\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 64\"},\"observed_at\":\"2026-10-01T08:38:24Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-004\"}\n{\"evidence_hash\":\"9ff544c860624c765b74f2e0484d26033faacbea6717772dec394e848fa2a603\",\"object\":{\"kind\":\"text\",\"value\":\"nvidia-driver-535\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"package.version\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"dpkg\"},\"subject\":\"ref://host/host-ai-01\"}\n{\"evidence_hash\":\"9d23812aa722c207508ac9a74532ad6680d78f659e92b6994673ffaede552d14\",\"object\":{\"kind\":\"text\",\"value\":\"6.8.0-45-generic\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.kernel\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"uname\"},\"subject\":\"ref://host/host-ai-01\"}\n{\"evidence_hash\":\"70d7c83b3835f93d754088ab88d1d007ce63fcc598275ebc4eca9378eb9537ac\",\"object\":{\"kind\":\"text\",\"value\":\"airgapped_zone_unreachable\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"coverage.blocked\",\"redaction\":\"none\",\"scope\":\"ref://zone/zone-c\",\"source\":{\"group\":\"agent\",\"id\":\"probe-network\",\"method\":\"ping\"},\"subject\":\"ref://zone/zone-c\"}\n{\"evidence_hash\":\"d6c819f24a74c7433fcf81b4f7a97b5cd767b23f3e386304d682e912d9812971\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 32\"},\"observed_at\":\"2026-10-03T21:07:12Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-025\"}\n{\"evidence_hash\":\"70b387008706b9765dd15d5332e6baf62544c96de8f9222fc48209da264da934\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 48 --shots 1024\"},\"observed_at\":\"2026-10-01T05:45:36Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-003\"}\n{\"evidence_hash\":\"112b7b19ef93b8a36e528e0f5b683614d7910a89abdd237b0a8adff2239318b2\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-03T06:43:12Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-020\"}\n{\"evidence_hash\":\"9f7b83ab739ad3aa53467b51f6358cf264e815afb3e432125f2d5a11f87081ff\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://gpu/gpu-a100-01\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.gpu\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"nvidia-smi\"},\"subject\":\"ref://host/host-ai-01\"}\n{\"evidence_hash\":\"a8d39f4a4f5b4d67bd156cf6189809eb819be133e41db6048c746124c2a6b028\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T12:43:48Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-022\"}\n{\"evidence_hash\":\"f2c8c488c9a85addf4a8e6585143421e963d84453ac63beea4984a8e0364a344\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T01:12:36Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-018\"}\n{\"evidence_hash\":\"b3d5ff2608ced1df03b3f267469639d0df5a32c28374a84f87648a277c58afad\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 32 --shots 1024\"},\"observed_at\":\"2026-10-03T00:57:36Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-018\"}\n{\"evidence_hash\":\"739d90469001d9e8a6ea5f7f3bc3b7edf537dc202cdcc67decfd41057374eaec\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-03T03:50:24Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-019\"}\n{\"evidence_hash\":\"aef510e11f136a8279cb6239b166336dd3ca84d56ff9b2b5cf4c0e65374c92e7\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T02:10:12Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-010\"}\n{\"evidence_hash\":\"a2d640bbd16ba7388bdd854f2d026c9c7b2ee94a21c455d2dccdf322afb1bf81\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-01T23:02:24Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-009\"}\n{\"evidence_hash\":\"7f127a2f49cdcece165dffc2fe9d7d99545063be26d4c2e4810942ad10e1a521\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-01T14:24:00Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-006\"}\n{\"evidence_hash\":\"f05ae922182c49a6bf5a98d287a95e34fd1fdb066d2f5ecf4b379a540f57cea3\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 64\"},\"observed_at\":\"2026-10-02T19:12:00Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-016\"}\n{\"evidence_hash\":\"ad4c53923080d9217d7074bb56618a8e62cab28afbaada88fdd6e57173d460f2\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T21:22:12Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-025\"}\n{\"evidence_hash\":\"294bd16e29d4b33b1d49a1c17d87c57c450ab68fa34f886db9e0284acbedf693\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-03T00:57:36Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-018\"}\n{\"evidence_hash\":\"b4bccee8747024412dbb9c7ee22d29083141e775d6664756d6cc03df326f41a5\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T23:17:24Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-009\"}\n{\"evidence_hash\":\"99bc12c86ba710e988c5d45526e2e774e43a73da8c5bcd1084047046c9666a99\",\"object\":{\"kind\":\"text\",\"value\":\"6.8.0-45-generic\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.kernel\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"uname\"},\"subject\":\"ref://host/host-quantum-01\"}\n{\"evidence_hash\":\"3edda60e11cd5234516d1e85bf49a1dc42a43c4ad13ff9407c6aad3ca8459ebd\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T19:27:00Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-016\"}\n{\"evidence_hash\":\"a89490f4ffe81d396db43223e929f7560452ee166a103cc8913b6be2cd5dec64\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T16:34:12Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-015\"}\n{\"evidence_hash\":\"a5c7d2699fb433243c5309945840f1d4dc9514b5226a2d63f9cbcaf48859108e\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://endpoint/host-chain-01:9090\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.listens\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"ss\"},\"subject\":\"ref://service/telemetry-collector\"}\n{\"evidence_hash\":\"61dd28629670bc590ecf20951e57f63b242b4ed437e4fdf6071c31b666ac54cb\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-03T15:21:36Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-023\"}\n{\"evidence_hash\":\"24b2a6b197d3a29b0a66ea636259eeaf15fcac9bf226f6fb3e8db34a8be4d6eb\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://artifact/liblegacy_math.so.1\"},\"observed_at\":\"2026-10-01T23:02:24Z\",\"predicate\":\"run.loaded\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"ptrace\"},\"subject\":\"ref://run/run-009\"}\n{\"evidence_hash\":\"37dfc7d757f2d7ac34a2fe02445f4fa9ea0f40df7eba2ec4f045828766d05bfc\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 32\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-001\"}\n{\"evidence_hash\":\"e29a171d11ee8a2c9c26ed387499524ab4e0b27d9fb5492124d302bb09b17f0e\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-02T13:26:23Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-014\"}\n{\"evidence_hash\":\"348fdd61c2fce845996f8f43f0d68becac5f2ce4fe2982d8a88f770295af0e8c\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T03:07:48Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-002\"}\n{\"evidence_hash\":\"cef91b03f9bede4d3787c5f2e6d57f82a7dda60e8849cdb953dd99473d772d52\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 32\"},\"observed_at\":\"2026-10-03T03:50:24Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-019\"}\n{\"evidence_hash\":\"9a041983e3f270c76cff841ad9a04b1da4adc74832861e8dac940bcd454357e9\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 32\"},\"observed_at\":\"2026-10-01T17:16:48Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-007\"}\n{\"evidence_hash\":\"a1e52a925dbcb201d3ebea98fb2817cdf5200abfe4e1e0f1ec2d64aa528792e4\",\"object\":{\"kind\":\"text\",\"value\":\"avx512\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.cpu_feature\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://host/host-chain-01\"}\n{\"evidence_hash\":\"6050b2e7a662acb1b8f6c4d4b8d7e6a3c5d584ec1deae114c9269998885b4947\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T13:41:23Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-014\"}\n{\"evidence_hash\":\"9609f045a0afff0dc5a15a14b8a96d520d55816535ca133ff1b664a33527509e\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-01T17:16:48Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-007\"}\n{\"evidence_hash\":\"bc32e4393888bf75b3d046a612386b40360449a68be88200b90c6fe67d90ec03\",\"object\":{\"kind\":\"text\",\"value\":\"1.18.15\"},\"observed_at\":\"2026-10-02T06:00:00Z\",\"predicate\":\"package.version\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"cargo\"},\"subject\":\"ref://package/solana-validator\"}\n{\"evidence_hash\":\"38f7a961adbc5430b0a703452d8ba3a5e6cc4451b6dec489df67a6a18ba29df1\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-02T13:26:23Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-014\"}\n{\"evidence_hash\":\"85ed28509b6e173ee403295b9aa1b898d6322be8f07e028c9ac3c50a84c71b5e\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-01T05:45:36Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-003\"}\n{\"evidence_hash\":\"22e2c7efac69ae2456990ffdf1bbf7aa76c6faf4dbed2d70bb83e198bfde709f\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-01T20:09:36Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-008\"}\n{\"evidence_hash\":\"813a49ff73fafe6b10010ffadc269cf37856a949bfbad8dcb0c2da85a3873f9f\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T18:29:24Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-024\"}\n{\"evidence_hash\":\"c49e9d2ab610bb2dd5c2d00c1153f4ceed8cb1857d929f555f66fbd5d7094714\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-03T12:28:48Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-022\"}\n{\"evidence_hash\":\"57a2c5666e60e31aafe166604875e7b88a4b5c511a083507d7d27bcf07e3de01\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://endpoint/zone-c-db-internal:5432\"},\"observed_at\":\"2026-10-02T10:33:36Z\",\"predicate\":\"run.connected_to\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"ebpf_sock_connect\"},\"subject\":\"ref://run/run-013\"}\n{\"evidence_hash\":\"9ac954aa9d047642a7b0b4ea58de59015c6accb0dbf91526a94324b876644332\",\"object\":{\"kind\":\"text\",\"value\":\"monitoring_active\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"coverage.observed\",\"redaction\":\"none\",\"scope\":\"ref://zone/zone-b\",\"source\":{\"group\":\"agent\",\"id\":\"probe-network\",\"method\":\"ping\"},\"subject\":\"ref://zone/zone-b\"}\n{\"evidence_hash\":\"0f91358e20ed4b4e2a4f89823935a2c15bd86ee5ffbee1c543cea35a735c3878\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 48 --shots 1024\"},\"observed_at\":\"2026-10-02T16:19:12Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-015\"}\n{\"evidence_hash\":\"edb6822d8e9afc81b7475d601c7889db10be86ff951ae64e0f0b5989c6c3c2c6\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T17:31:48Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-007\"}\n{\"evidence_hash\":\"2afa5f2e0448295e1b0f0d63502f7290b46c2908ca6061d82126ae90618c33e5\",\"object\":{\"kind\":\"text\",\"value\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"artifact.sha256\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"sha256\"},\"subject\":\"ref://dataset/imagenet-subset-v1\"}\n{\"evidence_hash\":\"57d89a6e819e4e0023243a315175497f682911e41b3c5f96355cc90aee872913\",\"object\":{\"kind\":\"text\",\"value\":\"python train_model.py --batch_size 64\"},\"observed_at\":\"2026-10-02T01:55:12Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-010\"}\n{\"evidence_hash\":\"11e2c3048dcf10c49225dc82a93bb53208f640060eba6c844b2300c88bc601f5\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-01T02:52:48Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-002\"}\n{\"evidence_hash\":\"d6852d9f5bfb5cdeb48ee808ef06c10b54d06fb48862793519b08c1b0701d922\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://dataset/imagenet-subset-v1\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"run.read\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"ptrace\"},\"subject\":\"ref://run/run-001\"}\n{\"evidence_hash\":\"07f68bd380696d95d43cf9bc0d2406998954d6a29e1887076bcc066d237ae4ed\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-02T16:19:12Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-015\"}\n{\"evidence_hash\":\"62c768be511fda254d6c21d44d7e9bc76d64f2573ec90f13f027db8beeba1e08\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://endpoint/host-quantum-01:9090\"},\"observed_at\":\"2026-10-02T16:00:00Z\",\"predicate\":\"host.listens\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"ss\"},\"subject\":\"ref://service/telemetry-collector\"}\n{\"evidence_hash\":\"5707103193bf3c697a29bede263029ad9b74af48a0929f938f0cae00da44d23a\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T14:39:00Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-006\"}\n{\"evidence_hash\":\"effd2af8f5800f63dbd64e5325747a489db78524ab30fa8cf495ce9f22800791\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-02T07:40:48Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-012\"}\n{\"evidence_hash\":\"06c782cc93ef1695030f1043dcf2fb57a71dcda4c87f088af6f833a3050d241e\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-02T22:04:48Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-017\"}\n{\"evidence_hash\":\"b02712695ca068a1b175baed3a2b64527e842852e37b34b4d13c1c59b6f371f0\",\"object\":{\"kind\":\"text\",\"value\":\"1.18.11\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"package.version\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"cargo\"},\"subject\":\"ref://package/solana-validator\"}\n{\"evidence_hash\":\"1ac9e7a29a034f0495580b0ca2abffa59a4927749c6d0c95274f1c02f972785e\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-01T11:31:12Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-005\"}\n{\"evidence_hash\":\"75af6de4a468f9291066109e9ffe8099a87566e6d002e7b96c9b73975f34a1a6\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T15:36:36Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-023\"}\n{\"evidence_hash\":\"a93c6f115ddf779e4de7d03d7b6e9e5372c16c82a7055610b9693d74b032b0b2\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-chain-01\"},\"observed_at\":\"2026-10-01T11:31:12Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-005\"}\n{\"evidence_hash\":\"b3f90ffb95e03f1d573b14fab05ab7660892150e9fb94ceeccee093b71260014\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 64 --shots 1024\"},\"observed_at\":\"2026-10-03T18:14:24Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-024\"}\n{\"evidence_hash\":\"f50c690b7e439d926ca0640ddbf0ca9156e025dadda1a07f71238e886ced77c3\",\"object\":{\"kind\":\"text\",\"value\":\"avx512\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.cpu_feature\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"procfs\"},\"subject\":\"ref://host/host-ai-01\"}\n{\"evidence_hash\":\"fe4fdcef111610ecea76bea3bd312ac2ad7e2066a04b9477f864255e5cc3dad1\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-03T06:58:12Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-020\"}\n{\"evidence_hash\":\"561d5126caca4a8b25fb55867bc174e08cb28f7f6bece5d5093dbba598a820e3\",\"object\":{\"kind\":\"text\",\"value\":\"qiskit-runner --circuit-depth 32 --shots 1024\"},\"observed_at\":\"2026-10-01T14:24:00Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-006\"}\n{\"evidence_hash\":\"66b0f61739a04c9df04642fa7ab22b51f1ab3a1fb89bfeac573d162bf8c5e2dc\",\"object\":{\"kind\":\"text\",\"value\":\"6.8.0-45-generic\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"host.kernel\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"uname\"},\"subject\":\"ref://host/host-chain-01\"}\n{\"evidence_hash\":\"653775bd04713a6931bd8980cd4c508b8f84b1fca76497f57aa8f8a95072cc92\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-01T06:00:36Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-003\"}\n{\"evidence_hash\":\"6e56bbf646d5f6a03b03e09d072963f2033d7d3cbf04e849d5d4e6566f0b6c67\",\"object\":{\"kind\":\"text\",\"value\":\"nvidia-driver-550\"},\"observed_at\":\"2026-10-02T12:00:00Z\",\"predicate\":\"package.version\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"dpkg\"},\"subject\":\"ref://host/host-ai-01\"}\n{\"evidence_hash\":\"bf08a3b77f33ac1f628a3a59226230fd1af47dc2b6fe4be8d7fd3bcfa0536ec4\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-quantum-01\"},\"observed_at\":\"2026-10-03T09:36:00Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-021\"}\n{\"evidence_hash\":\"0c2bc9836722db61e62bec44df7c3be7fd4ad4d63214c176c69a61d6f8fbebba\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-01T08:38:24Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-004\"}\n{\"evidence_hash\":\"0746c2e755b8f4cca0f5407febd402b9c01962921ba2377199988870cec8e2c0\",\"object\":{\"kind\":\"text\",\"value\":\"monitoring_active\"},\"observed_at\":\"2026-10-01T00:00:00Z\",\"predicate\":\"coverage.observed\",\"redaction\":\"none\",\"scope\":\"ref://zone/zone-a\",\"source\":{\"group\":\"agent\",\"id\":\"probe-network\",\"method\":\"ping\"},\"subject\":\"ref://zone/zone-a\"}\n{\"evidence_hash\":\"7019ec258f7e0ab0378d4a8d322965949e1ff6e652129541a26eff9dc7df11f1\",\"object\":{\"kind\":\"ref\",\"value\":\"ref://host/host-ai-01\"},\"observed_at\":\"2026-10-02T10:33:36Z\",\"predicate\":\"run.ran_on\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"runtime\"},\"subject\":\"ref://run/run-013\"}\n{\"evidence_hash\":\"9d99e37ad76dfbdb0b9bb9999dee3b60ba700cbbd42d2ec55cd2fc353a01f906\",\"object\":{\"kind\":\"text\",\"value\":\"solana-validator --ledger /mnt/ledger --rpc-port 8900\"},\"observed_at\":\"2026-10-02T04:48:00Z\",\"predicate\":\"run.command\",\"redaction\":\"none\",\"scope\":\"ref://host/host-chain-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-chain-01\",\"method\":\"procfs\"},\"subject\":\"ref://run/run-011\"}\n{\"evidence_hash\":\"57e8429905326326b0d2fc98f3c4232d02c8937f35729ee5b3a1777ed3c8bdbc\",\"object\":{\"kind\":\"text\",\"value\":\"ptrace_denied:yama_ptrace_scope\"},\"observed_at\":\"2026-10-02T19:12:00Z\",\"predicate\":\"coverage.blocked\",\"redaction\":\"none\",\"scope\":\"ref://host/host-ai-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-ai-01\",\"method\":\"ptrace_attach\"},\"subject\":\"ref://run/run-016\"}\n{\"evidence_hash\":\"54a2316f326ca4d16d6e844a75aa73cb8f23c8a27fc0054c6577bbf6a0a367a4\",\"object\":{\"kind\":\"int\",\"value\":0},\"observed_at\":\"2026-10-02T07:55:48Z\",\"predicate\":\"run.exit_status\",\"redaction\":\"none\",\"scope\":\"ref://host/host-quantum-01\",\"source\":{\"group\":\"agent\",\"id\":\"agent-host-quantum-01\",\"method\":\"waitpid\"},\"subject\":\"ref://run/run-012\"}"
+}

@@ -1,0 +1,61 @@
+{
+  "seed": 42,
+  "days": 3,
+  "num_hosts": 3,
+  "total_runs": 25,
+  "blocked_zone": "ref://zone/zone-c",
+  "hosts": [
+    "ref://host/host-ai-01",
+    "ref://host/host-chain-01",
+    "ref://host/host-quantum-01"
+  ],
+  "cuda_driver_incident": {
+    "host": "ref://host/host-ai-01",
+    "before_driver": "nvidia-driver-535",
+    "after_driver": "nvidia-driver-550",
+    "affected_run": "ref://run/run-011",
+    "explanation": "CUDA driver upgrade changed PTX compilation behavior"
+  },
+  "dataset_changed_incident": {
+    "dataset_ref": "ref://dataset/imagenet-subset-v1",
+    "before_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "after_hash": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e",
+    "first_run": "ref://run/run-001",
+    "second_run": "ref://run/run-004"
+  },
+  "package_upgrade_incident": {
+    "host": "ref://host/host-chain-01",
+    "package_ref": "ref://package/solana-validator",
+    "before_version": "1.18.11",
+    "after_version": "1.18.15"
+  },
+  "service_migration": {
+    "service_ref": "ref://service/telemetry-collector",
+    "initial_host": "ref://host/host-chain-01",
+    "target_host": "ref://host/host-quantum-01",
+    "migration_day": 2
+  },
+  "inventory_discrepancy": {
+    "host_ref": "ref://host/host-chain-01",
+    "reported_owner": "alice@corp.internal",
+    "actual_user": "validator-daemon",
+    "note": "CMDB inventory owner differs from real running process actor"
+  },
+  "undocumented_dependency": {
+    "run_ref": "ref://run/run-009",
+    "dependency_ref": "ref://artifact/liblegacy_math.so.1",
+    "description": "Binary loaded dynamically without manifest entry"
+  },
+  "blocked_zone_dependency": {
+    "run_ref": "ref://run/run-013",
+    "target_ref": "ref://endpoint/zone-c-db-internal:5432",
+    "target_zone": "ref://zone/zone-c",
+    "note": "Target service resides inside unmonitored/airgapped Zone C"
+  },
+  "ptrace_denied_incident": {
+    "run_ref": "ref://run/run-016",
+    "host_ref": "ref://host/host-ai-01",
+    "reason": "yama ptrace_scope restricted attachment",
+    "visibility": "not visible"
+  }
+}

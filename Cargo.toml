@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/tq-claims",
+    "crates/bokuei-agent",
+]
+resolver = "2"

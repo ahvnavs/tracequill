@@ -1,0 +1,74 @@
+[
+  {
+    "id": "postgres-server",
+    "name": "PostgreSQL Service Detection",
+    "description": "Infers service.type=postgres if host listens on port 5432 or process is postgres",
+    "match_predicate": "host.listens",
+    "condition": {
+      "op": "port-listens",
+      "port": 5432
+    },
+    "emit": {
+      "predicate": "service.type",
+      "object": {
+        "kind": "text",
+        "value": "postgres"
+      }
+    }
+  },
+  {
+    "id": "redis-server",
+    "name": "Redis Service Detection",
+    "description": "Infers service.type=redis if host listens on port 6379",
+    "match_predicate": "host.listens",
+    "condition": {
+      "op": "port-listens",
+      "port": 6379
+    },
+    "emit": {
+      "predicate": "service.type",
+      "object": {
+        "kind": "text",
+        "value": "redis"
+      }
+    }
+  },
+  {
+    "id": "nginx-server",
+    "name": "Nginx Web Server Detection",
+    "description": "Infers service.type=nginx if host listens on port 80 or 443",
+    "match_predicate": "host.listens",
+    "condition": {
+      "op": "in",
+      "values": [
+        "ref://endpoint/0.0.0.0:80",
+        "ref://endpoint/0.0.0.0:443",
+        "ref://endpoint/127.0.0.1:80",
+        "ref://endpoint/127.0.0.1:443"
+      ]
+    },
+    "emit": {
+      "predicate": "service.type",
+      "object": {
+        "kind": "text",
+        "value": "nginx"
+      }
+    }
+  },
+  {
+    "id": "generic-python-service",
+    "name": "Generic Python Service Detection",
+    "description": "Infers service.type=python-service if run command contains python and run ran_on host",
+    "match_predicate": "run.command",
+    "condition": {
+      "op": "exists"
+    },
+    "emit": {
+      "predicate": "service.type",
+      "object": {
+        "kind": "text",
+        "value": "generic-python-service"
+      }
+    }
+  }
+]

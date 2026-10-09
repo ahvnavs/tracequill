@@ -1,0 +1,32 @@
+[
+  {
+    "name": "hostname_match",
+    "description": "Positive link when two host references share an identical verified hostname",
+    "predicate": "host.hostname",
+    "base_strength": 0.85
+  },
+  {
+    "name": "machine_id_match",
+    "description": "Positive link when two hosts share an identical /etc/machine-id",
+    "predicate": "host.machine_id",
+    "base_strength": 0.95
+  },
+  {
+    "name": "dns_name_match",
+    "description": "Positive link when hosts or services share canonical DNS name",
+    "predicate": "host.dns_name",
+    "base_strength": 0.80
+  },
+  {
+    "name": "artifact_hash_match",
+    "description": "Positive link when artifact references share exact SHA-256",
+    "predicate": "artifact.sha256",
+    "base_strength": 0.90
+  },
+  {
+    "name": "process_identity_match",
+    "description": "Positive link when process ref has matching start time and executable hash",
+    "predicate": "process.start_and_exe",
+    "base_strength": 0.75
+  }
+]

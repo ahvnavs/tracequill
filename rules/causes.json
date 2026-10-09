@@ -1,0 +1,76 @@
+[
+  {
+    "id": "cause-runtime-package",
+    "name": "Software Package Version Change",
+    "category": "library or runtime version",
+    "base_weight": 85,
+    "match_predicate": "package.version",
+    "explanation": "Runtime system package or application version changed ({subject} -> {value})"
+  },
+  {
+    "id": "cause-loaded-library",
+    "name": "Shared Library Version / Hash Change",
+    "category": "library or runtime version",
+    "base_weight": 82,
+    "match_predicate": "run.loaded",
+    "explanation": "Loaded shared dynamic library changed ({value})"
+  },
+  {
+    "id": "cause-executable-change",
+    "name": "Executable Binary Mutation",
+    "category": "executable",
+    "base_weight": 80,
+    "match_predicate": "artifact.sha256",
+    "subject_prefix": "ref://process/",
+    "explanation": "Process binary SHA-256 altered ({value})"
+  },
+  {
+    "id": "cause-kernel-change",
+    "name": "Host Linux Kernel Upgrade",
+    "category": "kernel",
+    "base_weight": 75,
+    "match_predicate": "host.kernel",
+    "explanation": "Linux kernel release changed ({value})"
+  },
+  {
+    "id": "cause-cpu-feature",
+    "name": "CPU Hardware Feature Flag Drift",
+    "category": "CPU feature",
+    "base_weight": 70,
+    "match_predicate": "host.cpu_feature",
+    "explanation": "Host CPU instruction set or capability drifted ({value})"
+  },
+  {
+    "id": "cause-env-var",
+    "name": "Environment Variable Change",
+    "category": "environment variable",
+    "base_weight": 60,
+    "match_predicate": "run.env_name",
+    "explanation": "Execution environment variable set or modified ({value})"
+  },
+  {
+    "id": "cause-service-migration",
+    "name": "Service Host Migration",
+    "category": "service moves",
+    "base_weight": 55,
+    "match_predicate": "host.listens",
+    "subject_prefix": "ref://service/",
+    "explanation": "Network service endpoint relocated ({subject} listening on {value})"
+  },
+  {
+    "id": "cause-network-endpoint",
+    "name": "Network Socket / Endpoint Listener",
+    "category": "network endpoint",
+    "base_weight": 50,
+    "match_predicate": "host.listens",
+    "explanation": "Network listening endpoint changed ({value})"
+  },
+  {
+    "id": "cause-command-arg",
+    "name": "Execution Command Arguments Change",
+    "category": "executable",
+    "base_weight": 45,
+    "match_predicate": "run.command",
+    "explanation": "Command line execution invocation differed ({value})"
+  }
+]
